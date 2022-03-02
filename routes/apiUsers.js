@@ -3,10 +3,11 @@ const router = express.Router();
 
 // Controllers de usuarios
 
-const {test} = require('../controllers/usersControllers');
+const {test,register,login} = require('../controllers/usersControllers');
 
 //Rutas
 
 router.get('/test',test)
-
+router.post('/register',register)
+router.post('/login',login)
 module.exports = router;
